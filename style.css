@@ -35,3 +35,8 @@
     padding: 10px;
     box-shadow: 0px 0px 2px 0px white;
 }
+
+.card:hover
+{
+    box-shadow: 0px 0px 10px 0px white;
+}
