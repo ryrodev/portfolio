@@ -9,9 +9,7 @@
     font-family: 'Libre Barcode 128 Text', system-ui;
     font-size: 64px;
     color: white;
-    position: fixed;
     z-index: 1000;
-    margin: 20px 50px;
 }
 
 .logo:hover
@@ -20,24 +18,116 @@
     color: white;
 }
 
-*
+header
+{
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.747);
+    box-shadow: 0px 0px 2px 0px white;
+}
 
+
+.navlink
+{
+    color: white;
+    transition: 0.3s ease-out;
+}
+
+.navlink:hover
+{
+    color: white;
+    text-shadow: 0px 0px 5px white;
+    text-decoration: none;
+}
+
+*
 {
 
     font-family: 'DotGothic16', sans-serif;
-
+    color: white;
 }
 
 .card
 {
+    
     background-color: #000000;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0px 0px 2px 0px white;
     transition: 0.3s ease-out;
+    margin-bottom: 2rem;
 }
 
 .card:hover
 {
-    box-shadow: 0px 0px 6px 0px white;
+    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.432);
 }
+
+.card2
+{
+    
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 2px 0px white;
+    transition: 0.3s ease-out;
+    margin-bottom: 2rem;
+    width: 100vw;
+}
+
+.card2:hover
+{
+    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.432);
+}
+
+.project-card
+{
+    background-color: #0e0e0e;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s ease-out;
+    box-shadow: 0px 0px 2px 0px rgb(180, 180, 180);
+    height: 450px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img-div
+{
+    box-shadow: 0px 0px 2px 0px white;
+    width: 250px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.card-img-div img
+{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.container
+{
+    margin-top: 15vh;
+}
+
+::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #111111;        /* color of the tracking area */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #111111;  /* creates padding around scroll thumb */
+  }
