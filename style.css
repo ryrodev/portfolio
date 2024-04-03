@@ -29,16 +29,41 @@ header
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.747);
     box-shadow: 0px 0px 2px 0px white;
+    backdrop-filter: blur(10px);
+}
+
+li
+{
+  list-style: none;
 }
 
 
-.navlink
+.link-list
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.links-menu
+{
+    transition: all 0.3s ease;
+}
+
+.menu-link
 {
     color: white;
     transition: 0.3s ease-out;
+    margin: 10px;
 }
 
-.navlink:hover
+
+.menu-link:hover
 {
     color: white;
     text-shadow: 0px 0px 5px white;
@@ -55,43 +80,20 @@ header
 .card
 {
     
-    background-color: #000000;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 0px 2px 0px white;
-    transition: 0.3s ease-out;
-    margin-bottom: 2rem;
+  background-color: #000000cb;
+  padding: 10px;
+  box-shadow: 0px 0px 2px 0px white;
+  transition: 0.3s ease-out;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(1px);
+  width: 90vw;
 }
 
-.card:hover
-{
-    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.432);
-}
 
-.card2
-{
-    
-     background-color: #000000;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0px 0px 2px 0px white;
-    transition: 0.3s ease-out;
-    margin-bottom: 2rem;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.card2:hover
-{
-    box-shadow: 0px 0px 6px 0px rgba(255, 255, 255, 0.432);
-}
 
 h5
 {
-  margin:0px;
+  margin:10px;
   font-size:1.8em;
   font-weight:700;
   color: black;
@@ -103,19 +105,24 @@ p
     font-size:14px;
 }
 
+a:hover
+{
+  text-decoration: none;
+}
 .center
 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 /* End Non-Essential  */
 
 .property-card
 {
-  height:20rem;
-  width:16rem;
+  height:22rem;
+  width:18rem;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -130,6 +137,7 @@ p
   border-radius:16px;
   overflow:hidden;
   box-shadow: 0px 0px 5px 0px #e1e1e37a;
+  margin: 10px;
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
@@ -137,8 +145,8 @@ p
 
 .property-image
 {
-  height:8em;
-  width:16em;
+  height:10em;
+  width:18em;
   padding:1em 2em;
   position:Absolute;
   top:0px;
@@ -154,9 +162,9 @@ p
 
 .property-description
 {
-  background-color: #FAFAFC;
-  height:12em;
-  width:16em;
+  background-color: #dbdbdb;
+  height:14em;
+  width:18em;
   position:absolute;
   bottom:0em;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -164,30 +172,47 @@ p
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
   text-align:center;
+
 }
 
 /* Social Icons */
 
+.socials-list
+{
+  background-color: #11111171;
+  position: absolute;
+  display: flex;
+  transform: translateY(300px);
+}
+
 .property-social-icons
 {
-  width:2em;
-  height:2em;
-  background-color:black;
-  position:absolute;
-  bottom:1em;
-  left:1em;
+  width: 2em;
+  height: 2em;
+  background-color: black;
+  /* position: fixed; */
+  bottom: 1em;
+  left: 1em;
   border-radius: 10em;
   display: flex;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   align-items: center;
   justify-content: center;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin: 0px 5px 0px 5px;
 }
 
 .property-social-icons:hover
 {
     box-shadow: 0px 0px 15px 0px #e1e1e37a;
+}
+
+
+
+.property-social-icons:nth-child(1)
+{
+  transform: translateX(20px);
 }
 
 /* Property Cards Hover States */
@@ -199,7 +224,7 @@ p
 }
 .property-card:hover .property-image
 {
-  height:20em;
+  height:22em;
 }
 
 
@@ -226,4 +251,36 @@ p
     background-color: #ffffff;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #111111;  /* creates padding around scroll thumb */
+  }
+
+  @media (max-width: 925px) {
+    .links-menu
+    {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.89);
+        width: 100%;
+        transform: translate(100%, 110px);
+        box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
+        
+    }
+    .links-menu.active
+    {
+        transform: translate(0%, 110px);
+        backdrop-filter: blur(10px);
+        box-shadow: inset 0px -0.5px 0px 0px white;
+    }
+    .link-list
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-item
+    {
+        padding: 20px;
+    }
+    
+
   }
