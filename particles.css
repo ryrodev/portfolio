@@ -1,8 +1,9 @@
-body{
 
-    background-color:#000000;
-
-}
+html, body{
+    height: 100%;
+    margin:0px;
+    padding: 0px;
+  }
 
 .home-5-bg {
 
@@ -18,14 +19,17 @@ body{
 
 }
 
-
+  #particles-js{
+    width: 100%;
+    height: 100%;
+    background: #000000;
+  }
 
 .section {
 
     position: relative;
 
 }
-
 
 
 .home-5-content {
@@ -106,12 +110,3 @@ body{
 
 
 
-.home-5-bg #particles-js {
-
-position: absolute;
-
-    width: 100%;
-
-    height: 100%;
-
-}
