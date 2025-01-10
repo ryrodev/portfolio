@@ -1,325 +1,397 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-
-.logo
-{
-    font-family: 'Libre Barcode 128 Text', system-ui;
-    font-size: 64px;
-    color: white;
-    z-index: 1000;
-}
-
-.logo:hover
-{
-    text-decoration: none;
-    color: white;
-}
-
-header
-{
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 1000;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.747);
-    box-shadow: 0px 0px 2px 0px white;
-}
-
-li
-{
-  list-style: none;
-}
-
-
-.link-list
-{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    transition: all 0.3s ease;
-}
-
-.links-menu
-{
-    transition: all 0.3s ease;
-}
-
-.menu-link
-{
-    color: white;
-    transition: 0.3s ease-out;
-    margin: 10px;
-}
-
-
-.menu-link:hover
-{
-    color: white;
-    text-shadow: 0px 0px 5px white;
-    text-decoration: none;
-}
-
-*
-{
-
-    font-family: 'DotGothic16', sans-serif;
-    color: white;
-}
-
-.card
-{
+<!DOCTYPE html>
+<html lang="PT-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Miguel Halfeld - Desenvolvedor Fullstack">
+    <meta name="keywords" content="Desenvolvedor, Fullstack, PHP, JavaScript, Web">
+    <meta name="author" content="Miguel Halfeld">
     
-  background-color: #000000cb;
-  padding: 10px;
-  box-shadow: 0px 0px 2px 0px white;
-  transition: 0.3s ease-out;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(1px);
-  width: 90vw;
-}
-
-
-
-h5
-{
-  margin:10px;
-  font-size:1.8em;
-  font-weight:700;
-  color: black;
-}
-
-p
-{
-    color: black;
-    font-size:14px;
-}
-
-a:hover
-{
-  text-decoration: none;
-}
-.center
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.contact-links
-{
-  font-size: 32px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.contact-links:hover
-{
-  text-shadow: 0px 0px 5px white;
-  font-size: 40px;
-}
-
-/* End Non-Essential  */
-
-.property-card
-{
-  height:22rem;
-  width:18rem;
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -ms-flex-direction:column;
-  flex-direction:column;
-  position:relative;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:16px;
-  overflow:hidden;
-  margin: 10px;
-  border: solid 2px rgba(255, 255, 255, 0.219);
-  background: linear-gradient(315deg, rgb(0 0 0), rgb(0 0 0));
-}
-/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
-
-/* Top Half of card, image. */
-
-.property-image
-{
-  height:80%;
-  width:100%;
-  padding:1em 2em;
-  position:Absolute;
-  top:0px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-size:cover;
-  background-repeat:no-repeat;
-}
-
-/* Bottom Card Section */
-
-.property-description
-{
-  background-color: #dbdbdb;
-  height:14em;
-  width:18em;
-  position:absolute;
-  bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 0.5em 1em;
-  text-align:center;
-
-}
-
-/* Social Icons */
-
-.socials-list
-{
-  background-color: #000000b7;
-  position: absolute;
-  display: flex;
-  transform: translateY(300px);
-}
-
-.dependencies-list
-{
-  position: absolute;
-  display: flex;
-  background-color: #000000b7;
-  width: 100%;
-}
-
-.property-dependencies-icons
-{
-  width: 2em;
-  height: 2em;
-  background-color: #000000b7;
-  /* position: fixed; */
-  bottom: 1em;
-  left: 1em;
-  border-radius: 10px;
-  display: flex;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  align-items: center;
-  justify-content: center;
-  margin: 0px 5px 0px 5px;
-}
-
-.property-social-icons
-{
-  width: 2em;
-  height: 2em;
-  background-color: black;
-  /* position: fixed; */
-  bottom: 1em;
-  left: 1em;
-  border-radius: 10em;
-  display: flex;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  align-items: center;
-  justify-content: center;
-  margin: 0px 5px 0px 5px;
-}
-
-.property-social-icons:hover
-{
-    box-shadow: 0px 0px 15px 0px #e1e1e37a;
-}
-
-
-
-.property-social-icons:nth-child(1)
-{
-  transform: translateX(20px);
-}
-
-/* Property Cards Hover States */
-
-.property-card:hover .property-description
-{
-  height:0em;
-  padding:0px 1em;
-}
-.property-card:hover .property-image
-{
-
-  transform: scale(150%);
-}
-
-
-.property-card:hover .property-social-icons:hover
-{
-  background-color:rgb(0, 0, 0);
-  cursor:pointer;
-}
-
-.container
-{
-    margin-top: 15vh;
-}
-
-::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #111111;        /* color of the tracking area */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #ffffff;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid #111111;  /* creates padding around scroll thumb */
-  }
-
-  @media (max-width: 925px) {
-    .links-menu
-    {
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    
+    <title>RyroDev | Portfolio</title>
+    <style>
+      body {
+        background-color: #000000;
+        scroll-behavior: smooth;
+      }
+      #particles-js {
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.89);
         width: 100%;
-        transform: translate(100%, 110px);
-        box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0);
-        
-    }
-    .links-menu.active
-    {
-        transform: translate(0%, 110px);
-        box-shadow: inset 0px -0.5px 0px 0px white;
-    }
-    .link-list
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        height: 100%;
+        z-index: -1;
+        opacity: 0.3;
+      }
+      .logo-font {
+        font-family: 'Orbitron', sans-serif;
+      }
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(255,255,255,0.1);
+      }
+      /* Menu Mobile */
+      .mobile-menu {
+        transition: transform 0.3s ease;
+      }
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body class="bg-black text-gray-200">
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/90 z-[999] transform -translate-x-full mobile-menu">
+      <div class="flex flex-col items-center justify-center h-full space-y-6">
+        <a href="#home" class="text-2xl hover:text-blue-500 mobile-menu-close">Home</a>
+        <a href="#projetos" class="text-2xl hover:text-blue-500 mobile-menu-close">Projetos</a>
+        <a href="#contato" class="text-2xl hover:text-blue-500 mobile-menu-close">Contato</a>
+      </div>
+      <button class="absolute top-4 right-4 text-white text-3xl mobile-menu-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
 
-    .menu-item
-    {
-        padding: 20px;
-    }
-    
+    <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-sm z-50 border-b border-gray-800">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-2xl font-bold">
+          <a href="#" class="text-white hover:text-blue-500 transition logo-font" aria-label="Página inicial">
+            RyroDev
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#projetos" class="hover:text-blue-500 transition flex items-center" aria-label="Ir para projetos">
+            <i class="fa-solid fa-diagram-project mr-2"></i>Projetos
+          </a>
+          <a href="#contato" class="hover:text-blue-500 transition flex items-center" aria-label="Ir para contato">
+            <i class="fa-regular fa-envelope mr-2"></i>Contato
+          </a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-white" aria-label="Abrir menu mobile">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
 
-  }
+
+    <div id="particles-js"></div>
+    <main class="container mx-auto px-4 pt-20">
+        <section id="home" class="min-h-screen flex items-center justify-center pb-12">
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 p-8 rounded-xl shadow-2xl max-w-2xl mx-auto">
+              <div class="mb-6">
+                <i class="mdi mdi-pinwheel mdi-spin text-5xl text-white"></i>
+              </div>
+              <h1 class="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                Dev Fullstack
+              </h1>
+              <p class="text-gray-400 mb-6">
+                <i class="fa-brands fa-php text-blue-400"></i> PHP, 
+                <i class="fa-brands fa-node-js text-green-400"></i> NodeJS, 
+                <i class="fa-brands fa-js text-yellow-400"></i> JavaScript, 
+                <i class="fa-solid fa-database text-purple-400"></i> SQL, 
+                <i class="fa-brands fa-html5 text-orange-400"></i> HTML, 
+                <i class="fa-brands fa-css3-alt text-blue-500"></i> CSS
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projetos" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+              <i class="fa-solid fa-diagram-project mr-2"></i>Projetos
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- FinSync -->
+          <div class="project-card bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-lg overflow-hidden">
+            <div class="relative">
+              <img src="assets/img/finsync.png" alt="FinSync" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition">
+              <div class="absolute inset-0 bg-black opacity-40 hover:opacity-0 transition"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-white">FinSync</h3>
+              <p class="text-gray-400 mb-4">Trabalhei no Design e Frontend do site FinSync, um app de gestão de finanças</p>
+              <div class="flex justify-between items-center">
+                <div class="flex space-x-2 text-gray-400">
+                  <i class="fa-brands fa-js text-yellow-400"></i>
+                  <i class="fa-brands fa-html5 text-orange-400"></i>
+                  <i class="fa-brands fa-css3-alt text-blue-500"></i>
+                  <i class="fa-brands fa-bootstrap text-purple-500"></i>
+                </div>
+                <a href="https://finsync.com.br" target="_blank" class="text-blue-500 hover:text-blue-300">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- MediaKore -->
+          <div class="project-card bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-lg overflow-hidden">
+            <div class="relative">
+              <img src="assets/img/mediakore.png" alt="MediaKore" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition">
+              <div class="absolute inset-0 bg-black opacity-40 hover:opacity-0 transition"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-white">MediaKore</h3>
+              <p class="text-gray-400 mb-4">Plataforma centralizada de conhecimento para organizações</p>
+              <div class="flex justify-between items-center">
+                <div class="flex space-x-2 text-gray-400">
+                  <i class="fa-brands fa-php text-blue-400"></i>
+                  <i class="fa-brands fa-js text-yellow-400"></i>
+                  <i class="fa-brands fa-html5 text-orange-400"></i>
+                  <i class="fa-brands fa-css3-alt text-blue-500"></i>
+                  <i class="fa-solid fa-database text-green-500"></i>
+                </div>
+                <div class="flex space-x-2">
+                  <a href="https://github.com/ryrodev/mediakore" target="_blank" class="text-gray-400 hover:text-blue-500">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="http://mediakore.rf.gd" target="_blank" class="text-blue-500 hover:text-blue-300">
+                    <i class="fa-solid fa-globe"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- PostSystem -->
+          <div class="project-card bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-lg overflow-hidden">
+            <div class="relative">
+              <img src="assets/img/postsystem.png" alt="PostSystem" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition">
+              <div class="absolute inset-0 bg-black opacity-40 hover:opacity-0 transition"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-white">PostSystem</h3>
+              <p class="text-gray-400 mb-4">Sistema de registros de texto com data e hora da publicação</p>
+              <div class="flex justify-between items-center">
+                <div class="flex space-x-2 text-gray-400">
+                  <i class="fa-brands fa-php text-blue-400"></i>
+                  <i class="fa-brands fa-js text-yellow-400"></i>
+                  <i class="fa-brands fa-html5 text-orange-400"></i>
+                  <i class="fa-brands fa-css3-alt text-blue-500"></i>
+                  <i class="fa-solid fa-database text-green-500"></i>
+                </div>
+                <a href="https://github.com/ryrodev/PostSystem" target="_blank" class="text-blue-500 hover:text-blue-300">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- LoginPanel -->
+          <div class="project-card bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-lg overflow-hidden">
+            <div class="relative">
+              <img src="assets/img/loginpanel.png" alt="LoginPanel" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition">
+              <div class="absolute inset-0 bg-black opacity-40 hover:opacity-0 transition"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-white">LoginPanel</h3>
+              <p class="text-gray-400 mb-4">Sistema de login simples utilizando PHP e MySQL</p>
+              <div class="flex justify-between items-center">
+                <div class="flex space-x-2 text-gray-400">
+                  <i class="fa-brands fa-php text-blue-400"></i>
+                  <i class="fa-brands fa-js text-yellow-400"></i>
+                  <i class="fa-brands fa-html5 text-orange-400"></i>
+                  <i class="fa-brands fa-css3-alt text-blue-500"></i>
+                  <i class="fa-solid fa-database text-green-500"></i>
+                </div>
+                <a href="https://github.com/ryrodev/LoginPanel" target="_blank" class="text-blue-500 hover:text-blue-300">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Gerador de Senha -->
+          <div class="project-card bg-gradient-to-br from-black via-gray-900 to-black border border-gray-800 rounded-lg overflow-hidden">
+            <div class="relative">
+              <img src="assets/img/geradordesenha.gif" alt="Gerador de Senha" class="w-full h-48 object-cover opacity-80 hover:opacity-100 transition">
+              <div class="absolute in set-0 bg-black opacity-40 hover:opacity-0 transition"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-white">Gerador de Senha</h3>
+              <p class="text-gray-400 mb-4">Um gerador de senhas seguras e aleatórias em JavaScript</p>
+              <div class="flex justify-between items-center">
+                <div class="flex space-x-2 text-gray-400">
+                  <i class="fa-brands fa-js text-yellow-400"></i>
+                  <i class="fa-brands fa-html5 text-orange-400"></i>
+                  <i class="fa-brands fa-css3-alt text-blue-500"></i>
+                </div>
+                <a href="https://ryrodev.github.io/gerador-senha/" target="_blank" class="text-blue-500 hover:text-blue-300">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Adicione mais projetos seguindo o mesmo padrão -->
+        </div>
+      </section>
+
+      <section id="contato" class="w-full bg-gradient-to-br from-black via-gray-900 to-black border-t border-gray-800">
+        <div class="w-full px-4 py-16 relative">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+              Vamos Trabalhar Juntos
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-black/50 border border-gray-800 rounded-xl p-8 space-y-6">
+                <h3 class="text-2xl font-semibold text-white mb-4">Contato Direto</h3>
+                
+                <div class="space-y-4">
+                  <!-- Email -->
+                  <div class="flex items-center space-x-4 bg-gray-900/50 p-4 rounded-lg border border-gray-800 hover:bg-gray-900/70 transition group">
+                    <div class="bg-blue-500/20 p-3 rounded-full group-hover:bg-blue-500/40 transition">
+                      <i class="fas fa-envelope text-blue-400 text-2xl"></i>
+                    </div>
+                    <div>
+                      <span class="text-gray-400 text-sm">E-mail</span>
+                      <a 
+                        href="mailto:mhalfeld03@gmail.com" 
+                        class="block text-white text-lg hover:text-blue-400 transition"
+                      >
+                        mhalfeld03@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div>
+                <div class="bg-black/50 border border-gray-800 rounded-xl p-8 h-full">
+                  <h3 class="text-2xl font-semibold text-white mb-4 text-center">Redes Sociais</h3>
+                  
+                  <div class="grid grid-cols-2 gap-4">
+                    <!-- GitHub -->
+                    <a 
+                      href="https://github.com/ryrodev" 
+                      target="_blank" 
+                      class="bg-gray-900/50 border border-gray-800 rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-900/70 transition group"
+                    >
+                      <i class="fa-brands fa-github text-3xl text-white group-hover:text-blue-400 transition"></i>
+                      <span class="text-gray-400 text-sm mt-2">GitHub</span>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a 
+                      href="https://www.linkedin.com/in/miguel-halfeld-95b267253/" 
+                      target="_blank" 
+                      class="bg-gray-900/50 border border-gray-800 rounded-lg p-4 flex flex-col items-center justify-center hover:bg-gray-900/70 transition group"
+                    >
+                      <i class="fa-brands fa-linkedin text-3xl text-white group-hover:text-blue-400 transition"></i>
+                      <span class="text-gray-400 text-sm mt-2">LinkedIn</span>
+                    </a>
+                  </div>
+      
+                  <!-- Disponibilidade -->
+                  <div class="mt-8 bg-gray-900/50 border border-gray-800 rounded-lg p-4 text-center">
+                    <div class="flex items-center justify-center mb-2">
+                      <span class="w-3 h-3 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                      <p class="text-green-400 font-medium">Disponível para Projetos</p>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                      Aberto para freelances, CLT e projetos interessantes
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+              <p class="text-gray-600 flex items-center justify-center space-x-2">
+                <span>© 2024 RyroDev</span>
+                <span class="mx-2">•</span>
+                <span>Todos os direitos reservados</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: '#ffffff'
+          },
+          shape: {
+            type: 'circle',
+            stroke: {
+              width: 0,
+              color: '#000000'
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#ffffff',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'repulse'
+            },
+            onclick: {
+              enable: true,
+              mode: 'push'
+            },
+            resize: true
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+  </body>
+</html>
